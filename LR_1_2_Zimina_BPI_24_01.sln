@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37627.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_1_2_Zimina_BPI_24_01", "LR_1_2_Zimina_BPI_24_01\LR_1_2_Zimina_BPI_24_01.csproj", "{AE89B027-D953-46AA-95F9-5CEA49018281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE89B027-D953-46AA-95F9-5CEA49018281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE89B027-D953-46AA-95F9-5CEA49018281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE89B027-D953-46AA-95F9-5CEA49018281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE89B027-D953-46AA-95F9-5CEA49018281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC1EF28E-E30B-42A8-B1BD-AABC72973A68}
+	EndGlobalSection
+EndGlobal

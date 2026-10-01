@@ -1,0 +1,96 @@
+﻿<Window x:Class="LR_1_2_Zimina_BPI_24_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LR_1_2_Zimina_BPI_24_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="515.148">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <EventSetter Event="TextChanged" Handler="checkInputData"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40" x:Name="settingsColumn"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Column="1" Grid.Row="0">
+            <Label>Выберите тип фигуры</Label>
+        </WrapPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <RadioButton x:Name="circleRadio" Content="Круг" IsChecked="True"/>
+            <RadioButton x:Name="rectangleRadio" Content="Прямоугольник"/>
+            <RadioButton x:Name="triangleRadio" Content="Треугольник"/>
+        </StackPanel>
+
+        <!-- Круг -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="circlePanel" Visibility="Visible">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Радиус"/>
+                <TextBox Width="100" Height="20" x:Name="inputCircleRadius"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Прямоугольник -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="rectanglePanel" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Длина"/>
+                <TextBox Width="100" Height="20" x:Name="inputRectLength"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Ширина"/>
+                <TextBox Width="100" Height="20" x:Name="inputRectWidth"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Треугольник -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="trianglePanel" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сторона A"/>
+                <TextBox Width="100" Height="20" x:Name="inputTriSideA"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сторона B"/>
+                <TextBox Width="100" Height="20" x:Name="inputTriSideB"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сторона C"/>
+                <TextBox Width="100" Height="20" x:Name="inputTriSideC"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Площадь: "/>
+                <Label Content="Не посчитана" x:Name="resultS"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Периметр:"/>
+                <Label Content="Не посчитан" x:Name="resultP"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сообщение:"/>
+                <Label Content="Нет" x:Name="message"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="4" Height="20" Content="Посчитать площадь" x:Name="calculateS"/>
+        <Button Grid.Column="1" Grid.Row="5" Height="20" Content="Посчитать периметр" x:Name="calculateP"/>
+    </Grid>
+</Window>

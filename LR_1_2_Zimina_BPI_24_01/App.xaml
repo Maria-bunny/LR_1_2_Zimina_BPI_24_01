@@ -1,0 +1,9 @@
+﻿<Application x:Class="LR_1_2_Mashkov_BPI_24_01.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LR_1_2_Mashkov_BPI_24_01"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
